@@ -1,0 +1,29 @@
+.site-footer {
+  bottom: 0;
+  font-size: 13px;
+  height: 40px;
+  margin-top: 100px;
+  padding-top: 12px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+  color: #777c85;
+
+  a,
+  a:visited {
+	color: #777c85;
+  }
+
+  a:hover {
+	color: $color__brand-primary;
+  }
+}
+
+
+@include respond-below(xs) {
+  .site-footer {
+	font-size: 9px;
+	height: 45px;
+  }
+}

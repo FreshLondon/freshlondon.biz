@@ -1,0 +1,111 @@
+html {
+  box-sizing: border-box;
+}
+
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+
+
+body {
+  background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+#page {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+
+  .site-header {
+	position: fixed;
+	top: 0;
+	background-color: #fff;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	//box-shadow: 0px 0px 10px 1px rgba(165, 73, 138, 0.3);
+	z-index: 100;
+	border-bottom: 2px dashed $color__brand-primary;
+  }
+}
+
+
+@include respond-below(xs) {
+  #page {
+	.site-header {
+	  align-items: center;
+	  flex-direction: column;
+	}
+	#content {
+	  padding-top: 114px;
+	}
+  }
+}
+
+
+@import "content-sidebar";
+// @import "sidebar-content";
+
+/*--------------------------------------------------------------
+## Single Column / No Active Sidebar
+--------------------------------------------------------------*/
+.no-sidebar .site-main {
+  margin: 0;
+}
+
+
+.no-sidebar .content-area {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*--------------------------------------------------------------
+## Posts
+--------------------------------------------------------------*/
+@import "posts";
+
+/*--------------------------------------------------------------
+## Pages
+--------------------------------------------------------------*/
+@import "pages";
+
+/*--------------------------------------------------------------
+## Front page post boxes
+--------------------------------------------------------------*/
+@import "frontpage-post-blocks";
+
+/*--------------------------------------------------------------
+## Testimonials
+--------------------------------------------------------------*/
+@import "testimonials";
+
+/*--------------------------------------------------------------
+## Testimonials
+--------------------------------------------------------------*/
+@import "comments";
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+@import "footer";

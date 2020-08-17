@@ -1,0 +1,108 @@
+body,
+body.et-db #et-boc .et_pb_module {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	textarea {
+		color: $color__text-input;
+		border: 2px dashed $color__border-input;
+		border-radius: 3px;
+		background-color: $color__background-input;
+
+		&:focus {
+			color: $color__text-input-focus;
+			outline: none;
+			box-shadow: inset 0px -1px 5px 0px $color__brand-secondary;
+		}
+	}
+
+	select {
+		border: 2px dashed $color__border-input;
+		padding: 8px;
+		background-color: $color__background-input;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	select {
+		margin-top: 5px !important;
+		border-radius: 5px;
+		height: 40px;
+		width: 100%;
+		border: 2px dashed $color__border-input;
+		text-shadow: none !important;
+		padding: 8px;
+		display: block;
+	}
+
+	textarea {
+		border-radius: 5px;
+		height: 200px;
+		width: 100%;
+		border: 2px dashed $color__border-input;
+		padding: 8px;
+	}
+
+	.wpcf7-form-control.g-recaptcha.wpcf7-recaptcha > div {
+		margin: 0 auto;
+	}
+
+	.et_pb_contact_right {
+		margin-bottom: 18px;
+	}
+
+	.wpcf7-form-control-wrap {
+		position: relative;
+		display: block;
+		margin-bottom: 14px;
+	}
+
+	form.hosting-subscription {
+		width: 90%;
+		max-width: 350px;
+		overflow: hidden;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 30px;
+
+		.dropdown-intro {
+			padding-bottom: 12px;
+		}
+
+		p {
+			margin-top: 0;
+
+			input[type="image"] {
+				width: 100%;
+				max-width: 270px;
+				height: auto;
+			}
+		}
+	}
+}

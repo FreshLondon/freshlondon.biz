@@ -1,0 +1,8 @@
+[16-Mar-2017 21:31:17 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/admin/public_html/wp-content/themes/freshlondon/404.php on line 10
+[23-Mar-2017 15:10:26 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/admin/public_html/wp-content/themes/freshlondon/404.php on line 10
+[29-Mar-2017 10:29:30 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/admin/public_html/wp-content/themes/freshlondon/404.php on line 10
+[21-Aug-2017 18:28:01 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/admin/public_html/wp-content/themes/freshlondon/404.php on line 10
+[10-Sep-2017 13:26:03 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/admin/public_html/wp-content/themes/freshlondon/404.php on line 10
+[12-Sep-2017 01:07:23 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/admin/public_html/wp-content/themes/freshlondon/index.php on line 15
+[03-Feb-2018 05:49:46 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/admin/public_html/wp-content/themes/freshlondon/404.php on line 10
+[03-Feb-2018 05:49:49 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/admin/public_html/wp-content/themes/freshlondon/404.php on line 10

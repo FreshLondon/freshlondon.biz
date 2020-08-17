@@ -1,0 +1,61 @@
+.owl-carousel {
+  position: relative;
+
+  .owl-nav {
+	position: absolute;
+	left: -25px;
+	width: calc(100% + 50px);
+	display: flex;
+	justify-content: space-between;
+	top: 50%;
+	transform: translate(0, -50%);
+
+	button {
+	  width: auto;
+	  box-shadow: none;
+	  font-size: 50px !important;
+	  color: $color__brand-primary;
+	}
+
+	button:hover {
+	  border: none;
+	  box-shadow: none;
+	  color: $color__brand-secondary;
+	}
+  }
+  .owl-dots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 8px;
+  }
+
+  .owl-carousel button.owl-dot {
+	width: auto;
+  }
+
+  .owl-carousel button.owl-dot:hover,
+  .owl-carousel button.owl-dot:active,
+  .owl-carousel button.owl-dot:focus {
+	border: none;
+  }
+
+  .owl-dot span {
+	background-color: $color__brand-primary;
+	border-radius: 50%;
+	display: block;
+	height: 9px;
+	margin: 5px 5px;
+	width: 9px;
+  }
+
+  button.owl-dot.active span {
+	background-color: $color__brand-secondary;
+  }
+
+  .owl-dot:hover span {
+	background-color: $color__brand-secondary;
+  }
+
+
+}

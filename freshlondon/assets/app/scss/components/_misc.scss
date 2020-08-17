@@ -1,0 +1,36 @@
+.grecaptcha-badge {
+  display: none;
+}
+
+
+#doc_history {
+  display: none !important;
+}
+
+
+.single-superbill_invoice div#site-navigation-wrap,
+.single-superbill_invoice footer#colophon {
+  display: none;
+}
+
+
+@include respond-below(md) {
+  .homepage-slider {
+	display: none;
+  }
+  .current_page_item,
+  .current_page_item a {
+	background: transparent;
+  }
+
+}
+
+
+@include respond-below(xs) {
+  h1 {
+	font-size: 25px;
+  }
+}
+
+
+

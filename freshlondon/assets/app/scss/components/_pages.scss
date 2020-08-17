@@ -1,0 +1,39 @@
+.site-content {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+#primary {
+  margin: 0 auto;
+  max-width: 940px;
+
+  &.front-page {
+	padding: 0 30px;
+	max-width: unset;
+  }
+}
+
+.entry-header,
+.page-header {
+  /* margin-bottom: 0; */
+  /* position: absolute; */
+  /* text-align: right; */
+  /* top: 0; */
+  /* width: 100%; */
+  /* z-index: -1; */
+}
+
+.post-text {
+  position: relative;
+}
+
+.entry-content {
+  margin: 20px 0 0;
+  position: relative;
+  z-index: 10;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
