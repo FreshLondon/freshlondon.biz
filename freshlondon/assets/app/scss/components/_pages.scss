@@ -1,6 +1,9 @@
 .site-content {
   padding-top: 100px;
   padding-bottom: 30px;
+  @include respond-above(sm) {
+	padding-top: 120px;
+  }
 }
 
 #primary {
@@ -8,8 +11,11 @@
   max-width: 940px;
 
   &.front-page {
-	padding: 0 30px;
 	max-width: unset;
+
+	#main {
+	  padding: 0 30px;
+	}
   }
 }
 

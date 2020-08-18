@@ -23,10 +23,60 @@ else :
                 <p>Sorry, nothing here.</p>
             <? endif; ?>
 
-            <!-- start first category post box -->
+
+            <?
+            /**
+             * Setup query to show the ‘services’ post type with ‘8’ posts.
+             * Output the title with an excerpt.
+             */
+            $args = array(
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'posts_per_page' => 6,
+                'orderby' => 'title',
+                'order' => 'ASC',
+            );
+
+            $loop = new WP_Query( $args ); ?>
             <div class="FP-post-box-container">
-                <div class="FP-post-box-cat-header"><h4>RECENT PROJECTS</h4></div>
-                <div class="FP-post-box-inner">
+                <div class="FP-post-box-cat-header">
+                    <h4>
+                        Recent snippets
+                    </h4>
+                </div>
+                <div id="infinite-scroll" class="archive-post-block-outer">
+                    <? while ( $loop->have_posts() ) :
+                        $loop->the_post(); ?>
+
+
+                        <div class="archive-post-block" onclick="window.location.href='<? the_permalink(); ?>'">
+                            <div class='archive-post-block-icons'>
+                                <? $faicons = get_field( 'fa_icon' );
+                                if ( $faicons ):
+                                    foreach ( $faicons as $faicon ): ?>
+                                        <i class="<? echo $faicon['value']; ?> fa-fw"></i>
+                                    <? endforeach;
+                                endif; ?>
+                            </div>
+                            <div class='archive-post-block-title'>
+                                <? the_title(); ?>
+                            </div>
+                        </div>
+
+                    <? endwhile;
+                    wp_reset_postdata(); ?>
+                    <a href="<?= get_home_url(); ?>/blog/">More snippets</a>
+                </div>
+            </div>
+
+
+            <div class="FP-post-box-container">
+                <div class="FP-post-box-cat-header">
+                    <h4>
+                        Recent projects
+                    </h4>
+                </div>
+                <div class="FP-post-box-inner homepage-slider">
                     <?
                     $args = array(
                         'post_type' => 'portfolio',
@@ -43,9 +93,9 @@ else :
                             <? $images = get_field( 'image' );
                             if ( $images ):
                                 $imageClean = $images[0]; ?>
-                                <div class="FP-post-box-image" style="background-image: url('<? echo $imageClean['sizes']['medium']; ?>')">
-                                    <img class="item" src="<? echo $imageClean['sizes']['medium-large']; ?>" width="<? echo $imageClean['sizes']['medium-large-width']; ?>"
-                                         height="<? echo $imageClean['sizes']['medium-large-height']; ?>" alt="<? echo $image['alt']; ?>"/>
+                                <div class="FP-post-box-image">
+                                    <img class="item" src="<? echo $imageClean['sizes']['large']; ?>" width="<? echo $imageClean['sizes']['large-width']; ?>"
+                                         height="<? echo $imageClean['sizes']['large-height']; ?>" alt="<? echo $images[0]['alt']; ?>"/>
                                 </div>
                             <? endif; ?>
                         </div>
@@ -55,11 +105,15 @@ else :
             <!-- end first category post box -->
             <script>
 							$(document).ready(function () {
-								$('.FP-post-box-inner').slick({
+								$('.homepage-slider').slick({
 									arrows: true,
 									centerMode: true,
 									centerPadding: '60px',
-									slidesToShow: 3,
+									slidesToShow: 5,
+									slidesToScroll: 1,
+									// variableWidth: true,
+									autoplay: true,
+									autoplaySpeed: 1500,
 									responsive: [
 										{
 											breakpoint: 768,
@@ -67,7 +121,7 @@ else :
 												arrows: false,
 												centerMode: true,
 												centerPadding: '40px',
-												slidesToShow: 2
+												slidesToShow: 3
 											}
 										},
 										{

@@ -11,7 +11,6 @@ div#wpadminbar {
   }
 }
 
-
 img.custom-logo {
   vertical-align: top;
   margin-right: 17px;
@@ -20,7 +19,6 @@ img.custom-logo {
   margin-bottom: -2px;
   padding-top: 6px;
 }
-
 
 #site-navigation-wrap {
   display: flex;
@@ -141,17 +139,23 @@ img.custom-logo {
 
 	  a {
 		color: $color__brand-primary;
-		font-size: 16px;
-		padding: 0 12px;
-		text-transform: uppercase;
-		transition: ease all 0.6s;
-		display: block;
 		text-decoration: none;
 		font-family: 'DK Lemon Yellow Sun', sans-serif;
-		font-weight: 500;
+		font-weight: bold;
 		-webkit-font-smoothing: antialiased;
 		font-style: normal;
 		letter-spacing: 2px;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+
+		opacity: 0.7;
+		padding: 2px 12px 0;
+		display: block;
+		transition: ease all 0.3s;
+		&:hover {
+		  opacity: 1;
+		  padding: 0 12px 2px;
+		}
 	  }
 
 	}
@@ -168,7 +172,6 @@ img.custom-logo {
 	}
   }
 }
-
 
 /* Small menu. */
 #site-navigation-wrap {
@@ -202,7 +205,6 @@ img.custom-logo {
   }
 }
 
-
 @include respond-below(md) {
   #site-navigation-wrap {
 	.main-navigation {
@@ -219,7 +221,6 @@ img.custom-logo {
 	}
   }
 }
-
 
 @include respond-below(xs) {
   img.custom-logo {
@@ -306,7 +307,6 @@ img.custom-logo {
 	}
   }
 }
-
 
 @include respond-above(xs) {
   #site-navigation-wrap {

@@ -11,6 +11,8 @@
 @import 'lib/variables';
 @import 'lib/mixins-base';
 @import 'lib/mixins';
+@import 'lib/slick';
+@import 'lib/slick-theme';
 
 // Import components
 /*--------------------------------------------------------------
@@ -122,9 +124,3 @@
 # Miscellaneous
 --------------------------------------------------------------*/
 @import "components/misc";
-
-
-
-
-@import 'lib/slick';
-@import 'lib/slick-theme';
