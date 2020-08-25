@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="freshlondon.biz" overwriteAll="false" preserveTimestamps="false" traceLevel="BRIEF" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;*.hprof;*.pyc;*.scss;*.map" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="Always" serverName="freshlondon.biz - themes" overwriteAll="false" preserveTimestamps="false" traceLevel="BRIEF" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;*.hprof;*.pyc;*.scss;*.map" autoUploadExternalChanges="true">
     <serverData>
-      <paths name="freshlondon.biz">
+      <paths name="freshlondon.biz - themes">
         <serverdata>
           <mappings>
-            <mapping deploy="/wp-content/themes" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/home/freshlon/public_html/wp-content/themes" local="$PROJECT_DIR$" web="/" />
             <mapping local="" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="ftp.freshlondon.biz">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/public_html/wp-content/themes" local="$PROJECT_DIR$" web="/" />
-            <mapping deploy="/public_html/wp-content/plugins" local="$PROJECT_DIR$/../plugins" web="/" />
           </mappings>
         </serverdata>
       </paths>

@@ -15,9 +15,6 @@
 
 
 @include respond-below(md) {
-  .homepage-slider {
-	display: none;
-  }
   .current_page_item,
   .current_page_item a {
 	background: transparent;

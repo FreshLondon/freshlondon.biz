@@ -80,7 +80,7 @@ else :
                     <?
                     $args = array(
                         'post_type' => 'portfolio',
-                        'posts_per_page' => 6
+                        'posts_per_page' => 99
                     );
                     $posts = new WP_Query( $args );
                     while ( $posts->have_posts() ) : $posts->the_post(); ?>
@@ -106,20 +106,18 @@ else :
             <script>
 							$(document).ready(function () {
 								$('.homepage-slider').slick({
-									arrows: true,
+									arrows: false,
 									centerMode: true,
 									centerPadding: '60px',
 									slidesToShow: 5,
 									slidesToScroll: 1,
-									// variableWidth: true,
+									pauseOnHover: false,
 									autoplay: true,
-									autoplaySpeed: 1500,
+									autoplaySpeed: 2000,
 									responsive: [
 										{
 											breakpoint: 768,
 											settings: {
-												arrows: false,
-												centerMode: true,
 												centerPadding: '40px',
 												slidesToShow: 3
 											}
@@ -127,8 +125,6 @@ else :
 										{
 											breakpoint: 480,
 											settings: {
-												arrows: false,
-												centerMode: true,
 												centerPadding: '40px',
 												slidesToShow: 1
 											}
@@ -138,6 +134,73 @@ else :
 							});
             </script>
 
+            <div class="FP-post-box-container">
+                <!--                <div class="FP-post-box-cat-header">-->
+                <!--                    <h4>-->
+                <!--                        Recent clients-->
+                <!--                    </h4>-->
+                <!--                </div>-->
+                <div class="FP-post-box-inner client-slider">
+                    <?
+                    $args = array(
+                        'post_type' => 'clients',
+                        'posts_per_page' => 99
+                    );
+                    $posts = new WP_Query( $args );
+                    while ( $posts->have_posts() ) : $posts->the_post(); ?>
+                        <div class="FP-post-box">
+                            <div class="FP-post-box-post-title-wrap">
+                            <span class="FP-post-box-post-title">
+                            <? the_title(); ?>
+                            </span>
+                            </div>
+                            <?
+//                            $images = get_field( 'logo' );
+                            $images = get_field( 'logo12345' );
+                            if ( $images ):
+                                $imageClean = $images;
+                                ?>
+                                <div class="FP-post-box-image">
+                                    <a href="<?= the_field( 'website_url' ); ?>" target="_blank">
+                                        <img class="item" src="<? echo $imageClean['sizes']['medium']; ?>" width="<? echo $imageClean['sizes']['medium-width']; ?>"
+                                             height="<? echo $imageClean['sizes']['medium-height']; ?>" alt="<? echo $images[0]['alt']; ?>"/>
+                                    </a>
+                                </div>
+                            <? endif; ?>
+                        </div>
+                    <? endwhile; ?>
+                </div>
+            </div>
+            <script>
+							$(document).ready(function () {
+								$('.client-slider').slick({
+									arrows: false,
+									centerMode: true,
+									centerPadding: '60px',
+									slidesToShow: 5,
+									slidesToScroll: 1,
+									pauseOnHover: false,
+									autoplay: true,
+									autoplaySpeed: 2000,
+									responsive: [
+										{
+											breakpoint: 768,
+											settings: {
+												centerPadding: '40px',
+												slidesToShow: 3
+											}
+										},
+										{
+											breakpoint: 480,
+											settings: {
+												centerPadding: '40px',
+												slidesToShow: 1
+											}
+										}
+									]
+								});
+							});
+            </script>
         </main>
     </div>
     <? get_footer(); ?>

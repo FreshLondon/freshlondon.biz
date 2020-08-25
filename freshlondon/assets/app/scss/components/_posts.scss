@@ -2,23 +2,19 @@
   display: block;
 }
 
-
 .hentry {
   margin: 0 0 1.5em;
 }
-
 
 .byline,
 .updated:not(.published) {
   display: none;
 }
 
-
 .single .byline,
 .group-blog .byline {
   display: inline;
 }
-
 
 .page-content,
 .entry-content,
@@ -26,17 +22,14 @@
   margin: 1.5em 0 0;
 }
 
-
 .entry-title > a {
   color: rgba(64, 64, 64, 0.05);
   font-size: 75px;
 }
 
-
 .entry-meta {
   display: none;
 }
-
 
 .cat-header {
   font-size: 11px;
@@ -44,7 +37,6 @@
   position: relative;
   z-index: 2;
 }
-
 
 .attachment-freshlondon-featured-image.size-freshlondon-featured-image.wp-post-image {
   height: auto;
@@ -56,11 +48,9 @@
   box-shadow: 0 0 4px 1px rgba(64, 64, 64, 0.19);
 }
 
-
 .excerpt-read-more {
   font-size: 11px;
 }
-
 
 .navigation.post-navigation {
   margin-top: 0;
@@ -68,18 +58,15 @@
   z-index: 10;
 }
 
-
 #respond #comment-form-comment,
 #comment-form-share-text-padder {
   background: transparent;
 }
 
-
 #respond #comment-form-comment textarea,
 #comment-form-share-text-padder textarea {
   text-shadow: none;
 }
-
 
 .archive-post-block-outer,
 .infinite-wrap {
@@ -139,11 +126,9 @@
   }
 }
 
-
 .infinite-wrap {
   margin: 0 auto;
 }
-
 
 @include respond-below(sm) {
   .archive-post-block-outer,
@@ -152,7 +137,7 @@
 	.archive-post-block {
 	  flex-direction: column;
 	  align-items: center;
-	  margin: 0 20px 80px;
+	  margin: 2rem 20px 80px;
 	  width: calc(100% - 40px);
 	  position: relative;
 	  border: 2px dashed $color__brand-secondary;
