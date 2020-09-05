@@ -1,10 +1,3 @@
-@font-face {
-  font-family: 'Patrick Hand';
-  src: url('fonts/PatrickHand-Regular.woff2') format('woff2'),
-  url('fonts/PatrickHand-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 
 @font-face {
   font-family: 'Anton';
@@ -15,29 +8,25 @@
 }
 
 @font-face {
-  font-family: 'Super Sunrise';
-  src: local('Super Sunrise Italic'), local('SuperSunrise-Italic'),
-  url('fonts/SuperSunrise-Italic.woff2') format('woff2'),
-  url('fonts/SuperSunrise-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Super Sunrise';
-  src: local('Super Sunrise'), local('SuperSunrise'),
-  url('fonts/SuperSunrise.woff2') format('woff2'),
-  url('fonts/SuperSunrise.woff') format('woff');
+  font-family: 'Adam Warren Pro';
+  src: url('fonts/AdamWarrenpro.woff2') format('woff2'),
+  url('fonts/AdamWarrenpro.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Adam Warren Pro Bold';
+  src: url('fonts/AdamWarrenpro-Bold.woff2') format('woff2'),
+  url('fonts/AdamWarrenpro-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
-  font-family: 'DK Lemon Yellow Sun';
-  src: local('DK Lemon Yellow Sun'), local('DKLemonYellowSun'),
-  url('fonts/DKLemonYellowSun.woff2') format('woff2'),
-  url('fonts/DKLemonYellowSun.woff') format('woff');
+  font-family: 'Adam Warren Pro Bold Italic';
+  src: url('fonts/AdamWarrenpro-BoldItalic.woff2') format('woff2'),
+  url('fonts/AdamWarrenpro-BoldItalic.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
