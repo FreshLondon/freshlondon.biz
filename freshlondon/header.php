@@ -1,6 +1,6 @@
 <?
 /**
- * The header for our theme.
+ * The header for this theme.
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
@@ -10,28 +10,30 @@
  */
 ?><!DOCTYPE html>
 <html <? language_attributes(); ?>>
-    <head>
-        <meta charset="<? bloginfo('charset'); ?>">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="profile" href="http://gmpg.org/xfn/11">
-        <link rel="pingback" href="<? bloginfo('pingback_url'); ?>">
-        <? wp_head(); ?>
-    </head>
-    
+<head>
+    <meta charset="<? bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="<? bloginfo( 'pingback_url' ); ?>">
+    <script src="//www.youtube.com/player_api"></script>
 
-    <body <? body_class(); ?>>
-        <div id="page" class="site">
+    <? wp_head(); ?>
+</head>
 
-            <header id="masthead" class="site-header" role="banner">
 
-                <? # get_template_part( 'components/header/header', 'image' );  ?>
-                <? freshlondon_the_custom_logo(); ?>
+<body <? body_class(); ?>>
+<div id="page" class="site">
 
-                <a class="skip-link screen-reader-text" href="#content"><? esc_html_e('Skip to content', 'freshlondon'); ?></a>
+    <header id="masthead" class="site-header" role="banner">
 
-                <div id="site-navigation-wrap">
-                    <? get_template_part('components/navigation/navigation', 'top'); ?>
-                </div>
+        <? # get_template_part( 'components/header/header', 'image' );  ?>
+        <? freshlondon_the_custom_logo(); ?>
 
-            </header>
-            <div id="content" class="site-content">
+        <a class="skip-link screen-reader-text" href="#content"><? esc_html_e( 'Skip to content', 'freshlondon' ); ?></a>
+
+        <div id="site-navigation-wrap">
+            <? get_template_part( 'components/navigation/navigation', 'top' ); ?>
+        </div>
+
+    </header>
+    <div id="content" class="site-content">

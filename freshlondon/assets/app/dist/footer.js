@@ -17,6 +17,8 @@ jQuery(function ($) {
 
 		console.log('footer scripts finished');
 	});
+
+
 });
 /*
      _ _      _       _
