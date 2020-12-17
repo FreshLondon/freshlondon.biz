@@ -1,5 +1,4 @@
 <?
-
 /**
  * components functions and definitions.
  *
